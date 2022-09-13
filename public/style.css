@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-1: #5D69BE;
+  --color-2: #C89FEB;
+  --background-gradient: linear-gradient(45deg, var(--color-1), var(--color-2));
+}
+
+body {
+  background: var(--background-gradient);
+  min-height: 100vh;
+  font-family: "Quicksand";
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.col {
+  display: flex;
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 900px) {
+  .content {
+    display: flex;
+    height: calc(100vh - 6em);
+    align-items: center;
+  }
+}
+
+.content {
+  padding: 3em;
+}
+
+.left {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 3em;
+}
+
+.info {
+  font-size: 1.4em;
+  display: inline;
+}
+
+.highlight {
+  color: purple;
+  font-weight: 800;
+}
+
+.socials {
+  display: flex;
+  justify-content: center
+}
+
+.social {
+  background-color: white;
+  width: 2.5em;
+  padding: 0.5em;
+  border-radius: 1em;
+  margin: 2em 1em;
+}
+
+.right {
+  justify-content: center;
+}
+
+.logo-wrapper {
+  width: 14em;
+  height: 14em;
+  position: relative;
+}
+
+.logo-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  z-index: -1;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.logo {
+  width: 100%;
+  background-color: var(--color-1);
+  border-radius: 50%;
+}
